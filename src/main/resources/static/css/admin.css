@@ -1,0 +1,113 @@
+body {
+    background-image: url("https://sm-news.ru/wp-content/uploads/2019/08/06/can-elon-musk-make-us-smarter-with-brain-chips-feature.jpg");
+    background-repeat: no-repeat;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat",sans-serif;
+}
+.contact-section{
+    background: #313840;
+    opacity: 0.9;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.inner-width{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.contact-section h1{
+    font-size: 20px;
+    color: #888;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.name,.email,.message, .zhanr{
+    background: none;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid;
+    color: #888;
+    padding: 10px 6px;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.name{
+    float: left;
+    width: 270px;
+
+}
+
+.email{
+    float: top;
+    width: 270px;
+}
+.genre {
+    float: right;
+    width: 270px;
+    background: none;
+    border-radius: 8px;
+    padding-left: 7%;
+    padding-top: 0.4%;
+    padding-bottom: 0.3%;
+    color: #70a1ff;
+    border: 1px solid #70a1ff;
+    font-family: Georgia;
+    font-size: 19px;
+    transition: 0.4s linear;
+}
+
+
+
+.message{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+
+.contact-section button{
+    background: none;
+    color: #70a1ff;
+    border: 1px solid #70a1ff;
+    padding: 12px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.4s linear;
+    cursor: pointer;
+}
+
+.contact-section button:hover{
+    background: #70a1ff;
+    color: #fff;
+}
+.load {
+    background: none;
+    color: #70a1ff;
+    border: 1px solid #70a1ff;
+    padding: 12px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.4s linear;
+    cursor: pointer;
+}
+.load:hover {
+    background: #70a1ff;
+    color: #fff;
+}
+
+@media screen and (max-width:600px){
+    .name,.email{
+        width: 100%;
+    }
+}
