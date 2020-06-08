@@ -14,15 +14,9 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Autowired
     private UserService userService;
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
-
-//    @Bean
-//    public PasswordEncoder getPasswordEncoder() {
-//        return new BCryptPasswordEncoder(8);
-//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -33,7 +27,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .anyRequest().authenticated()
                     .and()
                     .formLogin()
-                    .loginPage("/").permitAll()
+                    .loginPage("/login").permitAll()
                     .defaultSuccessUrl("/",true)
                     .failureUrl("/FailedLogin")
                     .and()

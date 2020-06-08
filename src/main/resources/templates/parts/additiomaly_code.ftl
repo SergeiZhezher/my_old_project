@@ -3,19 +3,19 @@
 <html>
 <head>
     <title>Slick Playground</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/slider.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/slider-theme.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/All.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/filterLists.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/slider.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/slider-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/All.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/filterLists.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
     <script src="/static/js/all.js" type="text/javascript" charset="utf-8"></script>
     <script src="/static/js/slider.js" type="text/javascript" charset="utf-8"></script>
     <script src="/static/js/jquery.star-rating-svg.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/star-rating-svg.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/plaginator.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/star-rating-svg.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/plaginator.css"/>
+    <script src="https://www.google.com/recaptcha/api.js" async="async" defer="defer"></script>
 </head>
 
 <body bgcolor="#181818">

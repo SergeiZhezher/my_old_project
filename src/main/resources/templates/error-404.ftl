@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="/static/css/errorNotFound.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/errorNotFound.css"/>
   </head>
   <body>
     <div class="container">

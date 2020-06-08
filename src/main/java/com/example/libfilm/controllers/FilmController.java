@@ -1,7 +1,6 @@
 package com.example.libfilm.controllers;
 
 import com.example.libfilm.dao.Comment;
-import com.example.libfilm.dao.Film;
 import com.example.libfilm.dao.User;
 import com.example.libfilm.repos.FilmRepo;
 import com.example.libfilm.service.FilmService;
@@ -16,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class FilmController {
+
     @Autowired
     FilmRepo filmRepo;
+
     @Autowired
     FilmService filmService;
 
@@ -27,16 +28,16 @@ public class FilmController {
     }
 
     @GetMapping(value = "/film/{id}")
-    public String film(Model model,String text, @PathVariable() int id) {
-         Iterable<Film> sliderFilm = filmRepo.findTop21AllByOrderByRaitDesc();
-         model.addAttribute("sliderFilm", sliderFilm);
-         filmService.getFilm(model, text, id);
+    public String film( Model model, String text, @PathVariable() int id ) {
+         filmService.loadFilmPage(model, text, id);
+
          return "film";
     }
 
     @PostMapping("/film/{id}")
     public String addMessage(@AuthenticationPrincipal User user, Comment comment, Model model, @PathVariable() int id, @RequestParam String comments) {
-            filmService.addMessage(model, user, comment, id, comments);
-            return "redirect:http://localhost:8080/film/" + id;
+            filmService.addComment(model, user, comment, id, comments);
+
+              return "redirect:/film/" + id;
     }
 }

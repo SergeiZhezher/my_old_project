@@ -10,7 +10,7 @@
     <div class="my-rating-6" style="position: absolute; margin-left: 46%;margin-top: -0.3%"></div>
     <span style="position: absolute; width: 58%; color: white; font-family: Georgia; margin-left: 3%; font-size: 16px; margin-top: 5%">${film.getDescription()!}</span>
     <video width="550" height="350" preload="none" controls poster="https://dailyovation.com/wp-content/uploads/2018/05/Film-in-California-Conference-1.jpg" style="margin-left: 61.5%; margin-top: -1%">
-        <source src="/trailer/${film.getLingTrailer()!}">
+        <source src="/trailer/${film.getTrailerName()!}">
     </video>
     <div class="contact-section">
         <div class="inner-width">

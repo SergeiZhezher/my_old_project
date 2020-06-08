@@ -11,9 +11,9 @@
 
     <#if filmList??>
 <#list filmList.content as film>
-    <div style=" padding-left: 1%; border-right: 2px solid #ccc; background: #150734;  color:white; width: 50%; height: 400px; float: left; padding-right: 10px">
+    <div style=" padding-left: 1%; border-right: 2px solid #ccc; background: #150734;  color:white; width: 50%; height: 400px; float: left; padding-right: 10px" data-id="${film.getId()}">
         <div class="my-rating-6" style="position: absolute; margin-left: 34%; margin-top: 250px;"></div>
-        <a href="/film/${film.getId()}"><img src="/img/${film.filmName!}.jpg"></a>
+        <a href="/film/${film.getId()}"><img src="/img/${film.filmName!}.jpg"/></a>
         <div id="infoFilm" style="position: absolute; background: black; opacity: 0.7; width: 230px; margin-top: 13%; height: 120px;">
             <p>${film.filmName}</p>
             <p>Жанр - ${film.genre}</p>
@@ -50,7 +50,7 @@
         </div>
 
         <p style=" font-family: Georgia; width: 63%; height: 51%; font-size: 15px; overflow: hidden">${film.description!}</p>
-        <a target="_blank" href="${film.linkPoster}"><div class="buttonS">Смотреть full</div></a>
+        <a target="_blank" href="${film.linkOriginalFilm!}"><div class="buttonS">Смотреть full</div></a>
         <div class="buttonS" style="margin-left: 25%;">Trailer</div>
     </div>
     </#list>
@@ -58,9 +58,9 @@
 
     <#if genreFilm??>
         <#list genreFilm as film>
-            <div style=" padding-left: 1%; border-right: 2px solid #ccc; background: #150734;  color:white; width: 50%; height: 400px; float: left; padding-right: 10px">
+            <div style=" padding-left: 1%; border-right: 2px solid #ccc; background: #150734;  color:white; width: 50%; height: 400px; float: left; padding-right: 10px" data-id="${film.getId()}">
                 <div class="my-rating-6" style="position: absolute; margin-left: 34%; margin-top: 250px;"></div>
-                <a href="/film/${film.getId()}"><img src="/img/${film.filmName!}.jpg"></a>
+                <a href="/film/${film.getId()}"><img src="/img/${film.filmName!}.jpg"/></a>
                 <div id="infoFilm" style="position: absolute; background: black; opacity: 0.7; width: 230px; margin-top: 13%; height: 120px;">
                     <p>${film.filmName}</p>
                     <p>Жанр - ${film.genre}</p>
@@ -97,7 +97,7 @@
                 </div>
 
                 <p style=" font-family: Georgia; width: 63%; height: 51%; font-size: 15px; overflow: hidden">${film.description!}</p>
-                <a target="_blank" href="${film.linkPoster}"><div class="buttonS">Смотреть full</div></a>
+                <a target="_blank" href="${film.linkOriginalFilm!}"><div class="buttonS">Смотреть full</div></a>
                 <div class="buttonS" style="margin-left: 25%;">Trailer</div>
             </div>
         </#list>

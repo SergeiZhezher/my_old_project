@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>admin panel</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="/static/css/admin.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" type="text/css" href="/static/css/admin.css"/>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script>
   </head>
   <body>

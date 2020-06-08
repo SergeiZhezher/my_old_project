@@ -15,20 +15,26 @@ import javax.validation.Valid;
 
 @Controller
 public class RegistrationController  {
+
     @Autowired
     private UserService userService;
 
-    @PostMapping("registration")
+    @PostMapping("/registration")
     public String addUser(
             @RequestParam("g-recaptcha-response") String captchaResponce,
-            @Valid User user, BindingResult bindingResult, Model model) {
-            userService.registration(user, bindingResult, captchaResponce);
-             return "redirect:/";
+            @Valid User user, BindingResult bindingResult, Model model
+    ) {
+
+        System.out.println("go");
+        userService.registration(user, bindingResult, captchaResponce);
+        return "redirect:/";
     }
 
     @GetMapping("/activate/{code}")
     public String activate(@PathVariable String code) {
+
         System.out.println(userService.activateUser(code) ? "success activation" : "error activation");
+
         return "redirect:/";
     }
 }

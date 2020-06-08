@@ -2,7 +2,7 @@
     <div id="upPanel"
          style="z-index: 30; background: #292930; position: fixed;  margin-top: -3.5%; margin-left: -1%; width: 101%; height: 6%; opacity: 0.8"
          xmlns="http://www.w3.org/1999/html">
-        <input id="searchField" type="text" onfocus="this.removeAttribute('readonly');" readonly autocomplete="off" placeholder="Search" style="margin-top: 0.5%; margin-left: 9%; width: 34%; height: 65%; background: #7DA2A9; color: white; padding-left: 2%">
+        <input id="searchField" type="text" onfocus="this.removeAttribute('readonly');" readonly="readonly" autocomplete="off" placeholder="Search" style="margin-top: 0.5%; margin-left: 9%; width: 34%; height: 65%; background: #7DA2A9; color: white; padding-left: 2%"/>
 
         <div class="social-buttons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -22,11 +22,11 @@
             <div>
 
                 <a href="/film/${sl.getId()}">
-                    <img src="/img/${sl.getFilmName()}.jpg"> </a>
+                    <img src="/img/${sl.getFilmName()}.jpg"/> </a>
                     <div style="position: relative; text-align: center; pointer-events: none; bottom: 145px; height: 110px; opacity: 0.7; background: black">
-                    <span style="color: white; position: relative; top: 8%; font-family: Georgia; font-weight: 500" >${sl.getFilmName()}</span> <br>
-                    <span style="color: white; position: relative; top: 16%; font-family: Georgia; font-weight: 250" >Жанр - ${sl.getGenre()}</span> <br>
-                    <span style="color: white; position: relative; top: 25%; font-family: Georgia; font-weight: 250" >Год - ${sl.getYears()}</span> <br>
+                    <span style="color: white; position: relative; top: 8%; font-family: Georgia; font-weight: 500" >${sl.getFilmName()}</span> <br/>
+                    <span style="color: white; position: relative; top: 16%; font-family: Georgia; font-weight: 300" >Жанр - ${sl.getGenre()}</span> <br/>
+                    <span style="color: white; position: relative; top: 25%; font-family: Georgia; font-weight: 300" >Год - ${sl.getYears()}</span> <br/>
                     </div>
         </div>
         </#list>
@@ -62,26 +62,26 @@
 
     <div class="login-wrap">
         <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked="checked"/><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"/><label for="tab-2" class="tab">Sign Up</label>
             <div class="login-form">
                 <div class="sign-in-htm">
-                    <form method="post" action="/">
+                    <form method="post" action="/login">
                         <input type="hidden" name="_csrf" value="${_csrf.token}" />
                     <div class="group">
                         <label for="user" class="label">Username</label>
-                        <input id="user" type="text" name="username" class="input">
+                        <input id="user" type="text" name="username" class="input"/>
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" name="password" class="input" data-type="password">
+                        <input id="pass" type="password" name="password" class="input" data-type="password"/>
                     </div>
                     <div class="group">
-                        <input id="check" type="checkbox" class="check" checked>
+                        <input id="check" type="checkbox" class="check" checked="checked"/>
                         <label for="check"><span class="icon"></span> Keep me Signed in</label>
                     </div>
                     <div class="group">
-                        <input type="submit" class="button" value="Sign In">
+                        <input type="submit" class="button" value="Sign In"/>
                     </div>
                     </form>
                     <div class="hr"></div>
@@ -94,27 +94,27 @@
                         <input type="hidden" name="_csrf" value="${_csrf.token}" />
                     <div class="group">
                         <label for="user" class="label">Username</label>
-                        <input id="user" type="text" name="username" class="input ${(usernameError??)?string('is-invalid', '')}" value="<#if user??>${user.username}</#if>">
+                        <input id="user" type="text" name="username" class="input ${(usernameError??)?string('is-invalid', '')}" value="<#if user??>${user.username}</#if>"/>
                         <#if usernameError??>
                                 <script> alert("${usernameError}"); </script>
                         </#if>
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" name="password" class="input ${(passwordError??)?string('is-invalid', '')}" data-type="password">
+                        <input id="pass" type="password" name="password" class="input ${(passwordError??)?string('is-invalid', '')}" data-type="password"/>
                         <#if passwordError??>
                             <script> alert("${passwordError}"); </script>
                         </#if>
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Email Address</label>
-                        <input id="pass" placeholder="email@gmail.com" type="email" name="email" class="input ${(emailError??)?string('is-invalid', '')}">
+                        <input id="pass" placeholder="email@gmail.com" type="email" name="email" class="input ${(emailError??)?string('is-invalid', '')}"/>
                         <#if emailError??>
                             <script> alert("${emailError}"); </script>
                         </#if>
                     </div>
                     <div class="group">
-                        <input type="submit" class="button" value="Sign Up">
+                        <input type="submit" class="button" value="Sign Up"/>
                     </div>
                         <div style="transform:scale(0.70);transform-origin:0 0; display: inline-block; margin-right: 30px;">
                             <div class="g-recaptcha" data-sitekey="6Le9u9sUAAAAAP4qoFkqsz8XcicStY0QYnGrxTLJ"></div>

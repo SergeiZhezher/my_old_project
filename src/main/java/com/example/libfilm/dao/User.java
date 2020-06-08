@@ -5,8 +5,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 import java.util.Collection;
 import java.util.Set;
 
@@ -17,12 +15,10 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Length(min = 3, message = "name: min 3 symbol")
-    @Length(max = 40, message = "name: max 40 symbol")
+    @Length(min = 3, max = 40, message = "name: min 3 - max 40 symbol")
     private String username;
 
-    @Length(min = 6, message = "password: min 6 symbol")
-    @Length(max = 40, message = "password: max 40 symbol b")
+    @Length(min = 6, max = 40, message = "password: min 6 - max 40 symbol")
     private String password;
 
     @Length(min = 4, message = "email: min 4 symbol")
@@ -30,8 +26,6 @@ public class User implements UserDetails {
 
     private String activationCode;
     private Boolean active;
-
-
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))

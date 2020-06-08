@@ -1,4 +1,4 @@
-package com.example.libfilm.additionalyMethods;
+package com.example.libfilm.utils;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,23 +12,16 @@ import java.util.Map;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public interface AllMethods {
+public interface BetaFunctions {
 
-     static String searchHints(String s) {
-        return "none";
-    }
+    static String spellingСorrections(String s) {
 
-    static String searchСorrectionsMethod(String s) {
-        System.setProperty("javax.net.ssl.trustStore", "C:\\work program\\original_JDK\\jdk-11.0.6\\lib\\security\\cacerts");
-        System.setProperty ( "javax.net.ssl.trustStorePassword", "changeit");
-
-//        String searchLink = "https://www.google.com/search?q=" + s + "&rlz=1C1SQJL_enUA880UA880&oq=" + s + "&aqs=chrome..69i57j0l5.278j0j9&sourceid=chrome&ie=UTF-8";
-          String searchLink = "https://www.google.com/search?q=" + s;
+        String searchLink = "https://www.google.com/search?q=" + s;
         searchLink = searchLink.replaceAll("\\s", "+");
 
         try {
 
-            Document doc = Jsoup.connect(searchLink).timeout(25000).get();
+            Document doc = Jsoup.connect(searchLink).userAgent("Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4404.110 Safari/537.36").timeout(25000).get();
             Element debug = doc.getElementById("fprsl");
             System.out.println("Google result: (есть ошибки) " + debug.text());
             return debug.text();

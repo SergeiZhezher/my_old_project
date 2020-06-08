@@ -1,6 +1,6 @@
 package com.example.libfilm.controllers;
 
-import com.example.libfilm.additionalyMethods.AllMethods;
+import com.example.libfilm.utils.BetaFunctions;
 import com.example.libfilm.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,17 +14,14 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 @Controller
-public class AdminController implements AllMethods {
+public class AdminController implements BetaFunctions {
 
     @Autowired
     AdminService adminService;
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     @GetMapping("/admin")
-    public String admin(Model model) {
-
-        return "admin";
-    }
+    public String admin(Model model) { return "admin"; }
 
     @PostMapping("/admin")
     public String addFilm(
